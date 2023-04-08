@@ -1,0 +1,49 @@
+Redux
+	Redux is a predictable state container for JS apps
+Redux toolkit
+	Redux toolkit is the official, opinionated, batteries-included toolset for efficient Redux development
+		Abstract over the setup process
+		Handle the most common use cases
+		Include some useful utilities
+	It is also intended to be the standard way to write Redux logic in your application
+	Redux toolkit serves as an abstraction over redux. It hides the difficult parts ensuring you have a good developer experience
+	
+React-Redux
+	React-Redux is the official Redux UI binding library for React
+	
+Three Core concepts in redux
+	Store - Holds the state of your app
+	Action - Describes what happened
+	Reducer - Ties the store and actions together
+	
+	The global state of your application is stored as an object inside a single store
+	The only way to change the state is to dispatch an action, an object that describes what happened
+	To specify how the state tree is updated based on actions, you write pure reducers
+		Reducer - (previousState, action) => newState
+		
+Actions
+	The only way your application can interact with the store
+	Carry some information from your app to the redux store
+	Plain JS objects
+	Have a type property that describes something that happened in the application
+	The type property is typically defined as string constants
+	
+Reducers
+	Specify how the app's state changes in response to actions sent to the store
+	Function that accepts state and action as argument, and returns the next state of the application
+		Reducer - (previousState, action) => newState
+
+Redux store
+	One store for the entire app
+	Responsibilities
+		Holds app state
+		Allows access to state via getState()
+		Allows state to be updated via dispatch(action)
+		Registers listeners via subscribe(listener)
+		Handles unregistering of listeners via the function returned by subscribe(listener)
+
+Redux concerns
+	Redux requires too much boilerplate code
+		Action, Action object, Action creator, Switch statement in a reducer
+	A lot of other packages have to be installed to work with redux
+		Redux-thunk, Immer, Redux-devtools
